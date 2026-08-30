@@ -2,7 +2,7 @@
 #'
 #' Calculates the required main-trial sample size per treatment
 #' arm using the upper confidence limit (UCL) approach described
-#' by Whitehead et al. (2016).
+#' by Browne.
 #'
 #'@importFrom stats qchisq
 #'
@@ -13,6 +13,17 @@
 #' @param alpha Type I error rate.
 #' @param allocation Allocation ratio of experimental to control arm.
 #' @param conf_level Confidence level for the upper confidence limit.
+#'
+#' @details  Browne recommends an 80% upper confidence
+#' level. However, Sim and Lewis, set X at 0.95 or
+#' the 95% level.
+#'
+#' @references  Browne RH. On the use of a pilot sample for sample size
+#' determination. Stat Med 1995; 14: 1933–1940.
+#' @references Sim J and Lewis M. The size of a pilot study for a clinical
+#'  should be calculated in relation to considerations of
+#' precision and efficiency. J Clin Epidemiol 2012; 65:
+#' 301–308.
 #'
 #' @return A list containing the degrees of freedom, upper confidence
 #'   limit for the variance, upper confidence limit for the standard
