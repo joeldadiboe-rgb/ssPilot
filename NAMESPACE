@@ -6,17 +6,13 @@ export(optimized_ucl_sample_size)
 export(plot_optimization)
 export(standard_sample_size)
 export(ucl_sample_size)
-importFrom(ggplot2,
-  aes,
-  geom_line,
-  geom_point,
-  ggplot,
-  labs,
-  theme_minimal
-)
+importFrom(ggplot2,aes)
+importFrom(ggplot2,geom_line)
+importFrom(ggplot2,geom_point)
+importFrom(ggplot2,ggplot)
+importFrom(ggplot2,labs)
+importFrom(ggplot2,theme_minimal)
 importFrom(rlang,.data)
-importFrom(stats,
-  qchisq,
-  qnorm,
-  qt
-)
+importFrom(stats,qchisq)
+importFrom(stats,qnorm)
+importFrom(stats,qt)
