@@ -1,6 +1,6 @@
 Package: ssPilot
 Type: Package
-Title: Sample size calculation for pilot studies for a continuous endpoint 
+Title: Sample size calculation for external pilot studies for a continuous endpoint 
 Version: 1.0.0
 Authors@R: c(
     person(
@@ -14,7 +14,7 @@ Authors@R: c(
       role = c("aut", "rev")
     )
   )
-Description: An implementation of sample size calculations for pilot studies that minimize the overall trial sample size for the external pilot and main trial for a continuous endpoint as described in Whitehead et al 2015 <doi:10.1177/0962280215588241>. 
+Description: An implementation of sample size calculations for external pilot studies that minimize the overall trial sample size for the external pilot and main trial for a continuous endpoint as described in Whitehead et al 2015 <doi:10.1177/0962280215588241>. 
 License: GPL(>= 2)
 Encoding: UTF-8
 URL: https://github.com/joeldadiboe/ssPilot/
