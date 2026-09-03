@@ -38,7 +38,7 @@ A list containing the pilot-trial sample size per arm,
 \description{
 Calculates the required main-trial sample size per treatment
 arm using the non-central t-distribution (NCT) approach
-described by Whitehead et al. (2016).
+described by Julious and Owen.
 }
 \examples{
 nct_sample_size(
@@ -51,9 +51,7 @@ nct_sample_size(
 
 }
 \references{
-Whitehead, A. L., Julious, S. A., Cooper, C. L., & Campbell, M. J.
-(2016). Estimating the sample size for a pilot randomised trial
-to minimise the overall trial sample size for the external pilot
-and main trial for a continuous outcome variable.
-Statistical Methods in Medical Research, 25(3), 1057-1073.
+Julious SA and Owen RJ. Sample size calculations for
+clinical studies allowing for uncertainty about the variance.
+Pharmaceut Stat 2006; 5: 29–37.
 }

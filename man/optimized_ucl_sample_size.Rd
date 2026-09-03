@@ -16,7 +16,8 @@ optimized_ucl_sample_size(
 )
 }
 \arguments{
-\item{sd}{Pilot estimate of the standard deviation.}
+\item{sd}{Anticipated standard deviation based on prior knowledge,
+previous studies, published literature, or other available evidence.}
 
 \item{effect}{Expected treatment difference.}
 
@@ -35,7 +36,9 @@ optimized_ucl_sample_size(
 \value{
 A list containing the optimal pilot sample size per arm,
   the corresponding main-trial sample size per arm, the total
-  sample size per arm, and the confidence level used.
+  sample size per arm, the confidence level used, and a data frame
+  containing the optimization results for all candidate pilot
+  sample sizes.
 }
 \description{
 Finds the pilot-trial sample size per treatment arm that minimizes
@@ -51,4 +54,9 @@ optimized_ucl_sample_size(
   conf_level = 0.80
 )
 
+}
+\references{
+Whitehead, A. L., Julious, S. A., Cooper, C. L., & Campbell, M. J. (2016).
+ Estimating the sample size for a pilot randomised trial to minimise the overall trial sample size for the external pilot and main trial for a continuous outcome variable.
+ Statistical Methods in Medical Research, 25(3), 1057–1073.
 }

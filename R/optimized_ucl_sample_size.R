@@ -6,7 +6,8 @@
 #'
 #' @importFrom stats qchisq
 #'
-#' @param sd Pilot estimate of the standard deviation.
+#' @param sd Anticipated standard deviation based on prior knowledge,
+#'   previous studies, published literature, or other available evidence.
 #' @param effect Expected treatment difference.
 #' @param power Desired statistical power for the main trial.
 #' @param alpha Type I error rate.
@@ -15,9 +16,15 @@
 #' @param min_pilot Minimum pilot sample size per treatment arm.
 #' @param max_pilot Maximum pilot sample size per treatment arm to search.
 #'
+#' @references Whitehead, A. L., Julious, S. A., Cooper, C. L., & Campbell, M. J. (2016).
+#'  Estimating the sample size for a pilot randomised trial to minimise the overall trial sample size for the external pilot and main trial for a continuous outcome variable.
+#'  Statistical Methods in Medical Research, 25(3), 1057–1073.
+#'
 #' @return A list containing the optimal pilot sample size per arm,
 #'   the corresponding main-trial sample size per arm, the total
-#'   sample size per arm, and the confidence level used.
+#'   sample size per arm, the confidence level used, and a data frame
+#'   containing the optimization results for all candidate pilot
+#'   sample sizes.
 #'
 #' @examples
 #' optimized_ucl_sample_size(
@@ -149,20 +156,28 @@ optimized_ucl_sample_size <- function(
 
   optimal_total_n <- total_sizes[optimal_index]
 
+  # Optimization results
+  optimization_results <- data.frame(
+    pilot_n_per_arm = pilot_sizes,
+    main_n_per_arm = main_sizes,
+    total_n_per_arm = total_sizes
+  )
+
   # Return results
   list(
     optimal_pilot_n_per_arm = optimal_pilot_n,
     main_n_per_arm = optimal_main_n,
     total_n_per_arm = optimal_total_n,
-    conf_level = conf_level
+    conf_level = conf_level,
+    optimization_results = optimization_results
   )
 }
 
 # Test the Optimised Sample Size
 # optimized_ucl_sample_size(
- # sd = 1,
- # effect = 0.50,
-  # power = 0.90,
-  # alpha = 0.05,
-  # conf_level = 0.80
+#   sd = 1,
+#   effect = 0.50,
+#   power = 0.90,
+#   alpha = 0.05,
+#   conf_level = 0.80
 # )
