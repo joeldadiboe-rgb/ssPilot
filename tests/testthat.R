@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(whiteheadpilot)
+library(ssPilot)
 
-test_check("whiteheadpilot")
+test_check("ssPilot")
