@@ -705,7 +705,7 @@ ucl_sample_size(
 <!-- ``` -->
 
 
-# Optimized Pilot Sample Size
+# Optimized UCL Pilot Sample Size
 
 The UCL method requires a pilot study to estimate the population
 standard deviation. Increasing the pilot sample size improves the
