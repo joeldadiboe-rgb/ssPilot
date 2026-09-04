@@ -4,6 +4,7 @@ author: "Joel Ofoe Dadiboe"
 format: 
   html:
     embed-resources: true
+    toc: true
 vignette: >
   %\VignetteIndexEntry{ssPilot}
   %\VignetteEngine{quarto::html}
@@ -866,7 +867,7 @@ standard_result <- standard_sample_size(
 )
 
 ucl_result <- ucl_sample_size(
-  pilot_n = 16, # optimal sample size of the pilot study
+  pilot_n = 12, # as suggested by Julious (2005)
   sd = sd,
   effect = effect,
   power = power,
@@ -919,3 +920,16 @@ comparison <- data.frame(
 
 comparison
 ```
+
+# References
+
+Whitehead AL, Julious SA, Cooper CL, Campbell MJ. Estimating the sample size for a pilot randomised trial to minimise the overall trial sample size for the external pilot and main trial for a continuous outcome variable. Stat Methods Med Res. 2016 Jun;25(3):1057–73. doi:10.1177/0962280215588241
+
+Browne RH. On the use of a pilot sample for sample size determination. Statistics in Medicine. 1995 Sep 15;14(17):1933–40. doi:10.1002/sim.4780141709
+
+Julious SA, Owen RJ. Sample size calculations for clinical studies allowing for uncertainty about the variance. Pharmaceutical Statistics. 2006 Jan;5(1):29–37. doi:10.1002/pst.197
+
+Sim J, Lewis M. The size of a pilot study for a clinical trial should be calculated in relation to considerations of precision and efficiency. Journal of Clinical Epidemiology. 2012 Mar;65(3):301–8. doi:10.1016/j.jclinepi.2011.07.011
+
+Julious SA. Sample size of 12 per group rule of thumb for a pilot study. Pharmaceutical Statistics. 2005 Oct;4(4):287–91. doi:10.1002/pst.185
+
