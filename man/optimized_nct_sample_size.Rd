@@ -68,13 +68,14 @@ sample size is the one that minimizes the combined pilot and main-trial
 sample size per arm.
 }
 \examples{
+\donttest{
 optimized_nct_sample_size(
   sd = 1,
   effect = 0.50,
   power = 0.90,
   alpha = 0.05
 )
-
+}
 }
 \references{
 Whitehead, A. L., Julious, S. A., Cooper, C. L., & Campbell, M. J. (2016).
