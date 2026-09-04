@@ -1,6 +1,6 @@
 Package: ssPilot
 Type: Package
-Title: Sample size calculation for external pilot studies for a continuous endpoint 
+Title: Sample Size Calculation for External Pilot Studies for a Continuous Endpoint
 Version: 1.0.0
 Authors@R: c(
     person(
