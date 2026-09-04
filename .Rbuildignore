@@ -4,3 +4,4 @@
 ^development\.qmd$
 ^development\.html$
 ^development_files$
+^cran-comments\.md$
