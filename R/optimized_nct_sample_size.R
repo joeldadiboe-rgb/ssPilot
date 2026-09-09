@@ -48,12 +48,13 @@
 #'
 #' @examples
 #' \donttest{
-#' optimized_nct_sample_size(
+#' results <- optimized_nct_sample_size(
 #'   sd = 1,
 #'   effect = 0.50,
 #'   power = 0.90,
 #'   alpha = 0.05
 #' )
+#' plot(results)
 #'}
 #' @export
 

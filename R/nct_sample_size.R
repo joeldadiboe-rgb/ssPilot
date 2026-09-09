@@ -14,6 +14,8 @@
 #' @param allocation Allocation ratio of experimental to control arm.
 #' @param max_n Maximum main-trial sample size per arm to search.
 #'
+#' @details See also \code{ssPilot::optimized_nct_sample_size}.
+#'
 #' @return A list containing the pilot-trial sample size per arm,
 #'   pilot-trial degrees of freedom, required main-trial sample size
 #'   per arm, main-trial degrees of freedom, central t critical value,

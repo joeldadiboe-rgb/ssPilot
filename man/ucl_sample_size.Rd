@@ -42,7 +42,7 @@ by Browne.
 \details{
 Browne recommends an 80% upper confidence
 level. However, Sim and Lewis, set X at 0.95 or
-the 95% level.
+the 95% level. @details See also \code{ssPilot::optimized_ucl_sample_size}.
 }
 \examples{
 ucl_sample_size(

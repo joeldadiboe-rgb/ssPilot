@@ -27,13 +27,14 @@
 #'   sample sizes.
 #'
 #' @examples
-#' optimized_ucl_sample_size(
+#' results <- optimized_ucl_sample_size(
 #'   sd = 1,
 #'   effect = 0.50,
 #'   power = 0.90,
 #'   alpha = 0.05,
 #'   conf_level = 0.80
 #' )
+#' plot(results)
 #'
 #' @export
 

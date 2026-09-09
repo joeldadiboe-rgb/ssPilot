@@ -40,6 +40,9 @@ Calculates the required main-trial sample size per treatment
 arm using the non-central t-distribution (NCT) approach
 described by Julious and Owen.
 }
+\details{
+See also \code{ssPilot::optimized_nct_sample_size}.
+}
 \examples{
 nct_sample_size(
   pilot_n = 12,
