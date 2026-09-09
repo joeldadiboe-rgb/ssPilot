@@ -28,8 +28,9 @@
 #' }
 #'
 #' @export
+plot.sspilot <- function(results) {
 
-plot_optimization <- function(optimization_results) {
+  optimization_results <- results$optimization_results
 
   # Check that optimization_results is a data frame
   if (!is.data.frame(optimization_results)) {
@@ -67,8 +68,8 @@ plot_optimization <- function(optimization_results) {
   ggplot2::ggplot(
     optimization_results,
     ggplot2::aes(
-      x = .data$main_n_per_arm,
-      y = .data$pilot_n_per_arm
+      y = .data$main_n_per_arm,
+      x = .data$pilot_n_per_arm
     )
   ) +
     ggplot2::geom_line() +

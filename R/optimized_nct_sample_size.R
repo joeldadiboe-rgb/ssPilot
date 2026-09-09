@@ -211,7 +211,7 @@ optimized_nct_sample_size <- function(
   )
 
   # Return results
-  list(
+  out <- list(
     optimal_pilot_n_per_arm = optimal_pilot_n,
     main_n_per_arm = optimal_result$main_n_per_arm,
     total_n_per_arm = minimum_total,
@@ -228,4 +228,7 @@ optimized_nct_sample_size <- function(
     optimization_results =
       optimization_results
   )
+
+  class(out) <- "sspilot"
+  return(out)
 }

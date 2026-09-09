@@ -165,13 +165,17 @@ optimized_ucl_sample_size <- function(
   )
 
   # Return results
-  list(
+  out <- list(
     optimal_pilot_n_per_arm = optimal_pilot_n,
     main_n_per_arm = optimal_main_n,
     total_n_per_arm = optimal_total_n,
     conf_level = conf_level,
     optimization_results = optimization_results
   )
+
+  class(out) <- "sspilot"
+
+  return(out)
 }
 
 # Test the Optimised Sample Size
