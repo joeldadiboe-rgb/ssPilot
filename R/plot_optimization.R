@@ -5,7 +5,7 @@
 #' an optimized sample size calculation. The combination that
 #' minimizes the total sample size is highlighted.
 #'
-#' @param optimization_results A data frame containing the optimization
+#' @param results A data frame containing the optimization
 #'   results. It must contain columns named `pilot_n_per_arm`,
 #'   `main_n_per_arm`, and `total_n_per_arm`.
 #'
@@ -68,7 +68,7 @@ plot.sspilot <- function(results) {
   ggplot2::ggplot(
     optimization_results,
     ggplot2::aes(
-      y = .data$main_n_per_arm,
+      y = .data$total_n_per_arm,
       x = .data$pilot_n_per_arm
     )
   ) +
@@ -79,8 +79,8 @@ plot.sspilot <- function(results) {
       size = 3
     ) +
     ggplot2::labs(
-      x = "Main-trial sample size per arm",
-      y = "Pilot-trial sample size per arm"
+      x = "Total sample size per arm",
+      y = "Pilot trial sample size per arm"
     ) +
     ggplot2::theme_minimal()
 }

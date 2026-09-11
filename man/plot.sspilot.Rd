@@ -7,7 +7,7 @@
 \method{plot}{sspilot}(results)
 }
 \arguments{
-\item{optimization_results}{A data frame containing the optimization
+\item{results}{A data frame containing the optimization
 results. It must contain columns named `pilot_n_per_arm`,
 `main_n_per_arm`, and `total_n_per_arm`.}
 }
