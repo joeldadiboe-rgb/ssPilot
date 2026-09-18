@@ -4,12 +4,14 @@
 \alias{plot.sspilot}
 \title{Plot pilot and main-trial sample size relationship}
 \usage{
-\method{plot}{sspilot}(results)
+\method{plot}{sspilot}(x, ...)
 }
 \arguments{
-\item{results}{A data frame containing the optimization
+\item{x}{A data frame containing the optimization
 results. It must contain columns named `pilot_n_per_arm`,
 `main_n_per_arm`, and `total_n_per_arm`.}
+
+\item{...}{Additional arguments to be passed to methods.}
 }
 \value{
 A ggplot object showing pilot-trial sample size against
@@ -22,7 +24,6 @@ an optimized sample size calculation. The combination that
 minimizes the total sample size is highlighted.
 }
 \examples{
-\dontrun{
 ucl_results <- optimized_ucl_sample_size(
   sd = 1,
   effect = 0.50,
@@ -30,7 +31,6 @@ ucl_results <- optimized_ucl_sample_size(
   alpha = 0.05
 )
 
-plot_optimization(ucl_results$optimization_results)
-}
+plot(ucl_results)
 
 }

@@ -5,9 +5,10 @@
 #' an optimized sample size calculation. The combination that
 #' minimizes the total sample size is highlighted.
 #'
-#' @param results A data frame containing the optimization
+#' @param x A data frame containing the optimization
 #'   results. It must contain columns named `pilot_n_per_arm`,
 #'   `main_n_per_arm`, and `total_n_per_arm`.
+#' @param ... Additional arguments to be passed to methods.
 #'
 #' @return A ggplot object showing pilot-trial sample size against
 #'   main-trial sample size, with the optimal combination highlighted.
@@ -23,12 +24,12 @@
 #'   alpha = 0.05
 #' )
 #'
-#' plot_optimization(ucl_results$optimization_results)
+#' plot(ucl_results)
 #'
 #' @export
-plot.sspilot <- function(results) {
+plot.sspilot <- function(x, ...) {
 
-  optimization_results <- results$optimization_results
+  optimization_results <- x$optimization_results
 
   # Check that optimization_results is a data frame
   if (!is.data.frame(optimization_results)) {
