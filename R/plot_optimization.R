@@ -16,7 +16,6 @@
 #' @importFrom rlang .data
 #'
 #' @examples
-#' \dontrun{
 #' ucl_results <- optimized_ucl_sample_size(
 #'   sd = 1,
 #'   effect = 0.50,
@@ -25,7 +24,6 @@
 #' )
 #'
 #' plot_optimization(ucl_results$optimization_results)
-#' }
 #'
 #' @export
 plot.sspilot <- function(results) {
