@@ -74,11 +74,16 @@ plot.sspilot <- function(results) {
     ggplot2::geom_point() +
     ggplot2::geom_point(
       data = optimal_result,
-      size = 3
+      size = 3,
+      color = "blue"
     ) +
     ggplot2::labs(
       y = "Total sample size per arm",
       x = "Pilot trial sample size per arm"
     ) +
-    ggplot2::theme_minimal()
+    ggplot2::theme_minimal() +
+    ggplot2::theme(axis.text.x = ggplot2::element_text(size = 20),
+                   axis.text.y = ggplot2::element_text(size = 20),
+                   axis.title.x = ggplot2::element_text(size = 20),
+                   axis.title.y = ggplot2::element_text(size = 20))
 }
