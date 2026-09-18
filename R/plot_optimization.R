@@ -77,8 +77,8 @@ plot.sspilot <- function(results) {
       size = 3
     ) +
     ggplot2::labs(
-      x = "Total sample size per arm",
-      y = "Pilot trial sample size per arm"
+      y = "Total sample size per arm",
+      x = "Pilot trial sample size per arm"
     ) +
     ggplot2::theme_minimal()
 }
