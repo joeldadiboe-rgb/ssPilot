@@ -1,7 +1,7 @@
 Package: ssPilot
 Type: Package
 Title: Sample Size Calculation for External Pilot Studies for a Continuous Endpoint
-Version: 1.0.0
+Version: 1.0.0.9000
 Authors@R: c(
     person(
       "Joel", "Dadiboe",
@@ -29,4 +29,3 @@ Suggests:
 VignetteBuilder: quarto
 Config/testthat/edition: 3
 Config/roxygen2/version: 8.1.0
-
